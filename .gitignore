@@ -1,0 +1,13 @@
+# Ignore Cargo build artifacts
+/target
+Cargo.lock
+
+# Ignore local node data
+/data
+
+# Ignore the entire cloned basednode directory
+# We are managing it via scripts, not storing it in the repo.
+/basednode/
+
+# Ignore local log files
+*.log
