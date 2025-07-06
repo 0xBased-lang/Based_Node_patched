@@ -1,0 +1,10 @@
+--- a/primitives/io/src/lib.rs
++++ b/primitives/io/src/lib.rs
+@@ -1638,7 +1638,6 @@ pub fn set_storage(key: &[u8], value: &[u8]) {
+ }
+ 
+ #[cfg(not(feature = "std"))]
+-#[no_mangle]
+ pub fn panic(info: &core::panic::PanicInfo) -> ! {
+ 	let message = sp_std::alloc::format!("{}", info);
+ 	logging::log(log::Level::Error, "runtime", message.as_bytes());
